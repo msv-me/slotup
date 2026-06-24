@@ -72,29 +72,22 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
                   claimer ? 'border-gray-100 opacity-75' : 'border-gray-200'
                 }`}
               >
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <p className="font-semibold text-gray-900">{slot.label}</p>
-                    {slot.note && <p className="text-gray-400 text-xs mt-0.5">{slot.note}</p>}
-                  </div>
-                  {claimer ? (
+                {claimer ? (
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-900">{slot.label}</p>
+                      {slot.note && <p className="text-gray-400 text-xs mt-0.5">{slot.note}</p>}
+                      <p className="mt-2 text-sm text-gray-600">
+                        <span className="text-gray-400">Bringing snacks:</span>{' '}
+                        <span className="font-medium text-gray-800">{claimer}</span>
+                      </p>
+                    </div>
                     <span className="shrink-0 text-xs bg-green-50 text-green-700 border border-green-200 rounded-full px-2.5 py-1 font-medium">
                       Claimed
                     </span>
-                  ) : (
-                    <span className="shrink-0 text-xs bg-gray-50 text-gray-500 border border-gray-200 rounded-full px-2.5 py-1 font-medium">
-                      Open
-                    </span>
-                  )}
-                </div>
-
-                {claimer ? (
-                  <p className="mt-2 text-sm text-gray-600">
-                    <span className="text-gray-400">Bringing snacks:</span>{' '}
-                    <span className="font-medium text-gray-800">{claimer}</span>
-                  </p>
+                  </div>
                 ) : (
-                  <ClaimForm sheetId={sheetId} slotId={slot.id} />
+                  <ClaimForm sheetId={sheetId} slotId={slot.id} label={slot.label} note={slot.note ?? undefined} />
                 )}
               </div>
             )
