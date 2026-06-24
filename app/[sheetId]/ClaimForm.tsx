@@ -26,7 +26,7 @@ export default function ClaimForm({ sheetId, slotId }: { sheetId: string; slotId
     return (
       <button
         onClick={() => setOpen(true)}
-        className="mt-3 w-full rounded-lg bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-medium py-2.5 text-sm transition-colors"
+        className="mt-3 w-full sm:w-auto sm:min-w-40 rounded-lg bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-medium py-2.5 px-5 text-sm transition-colors"
       >
         Claim this slot
       </button>
@@ -49,7 +49,7 @@ export default function ClaimForm({ sheetId, slotId }: { sheetId: string; slotId
         <button
           onClick={submit}
           disabled={pending || !name.trim()}
-          className="flex-1 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-medium py-2.5 text-sm transition-colors"
+          className="flex-1 sm:flex-none sm:min-w-32 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-medium py-2.5 px-5 text-sm transition-colors"
         >
           {pending ? 'Claiming…' : 'Confirm'}
         </button>
