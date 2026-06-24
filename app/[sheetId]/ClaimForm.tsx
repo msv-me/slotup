@@ -26,7 +26,7 @@ export default function ClaimForm({ sheetId, slotId }: { sheetId: string; slotId
     return (
       <button
         onClick={() => setOpen(true)}
-        className="mt-3 w-full rounded-lg bg-green-600 hover:bg-green-500 active:bg-green-700 text-white font-medium py-2.5 text-sm transition-colors"
+        className="mt-3 w-full rounded-lg bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-medium py-2.5 text-sm transition-colors"
       >
         Claim this slot
       </button>
@@ -42,20 +42,20 @@ export default function ClaimForm({ sheetId, slotId }: { sheetId: string; slotId
         value={name}
         onChange={(e) => { setName(e.target.value); setError('') }}
         onKeyDown={(e) => e.key === 'Enter' && submit()}
-        className="w-full rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 px-3 py-2.5 text-sm focus:outline-none focus:border-green-500"
+        className="w-full rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
       />
-      {error && <p className="text-red-400 text-xs">{error}</p>}
+      {error && <p className="text-red-500 text-xs">{error}</p>}
       <div className="flex gap-2">
         <button
           onClick={submit}
           disabled={pending || !name.trim()}
-          className="flex-1 rounded-lg bg-green-600 hover:bg-green-500 disabled:opacity-50 text-white font-medium py-2.5 text-sm transition-colors"
+          className="flex-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white font-medium py-2.5 text-sm transition-colors"
         >
           {pending ? 'Claiming…' : 'Confirm'}
         </button>
         <button
           onClick={() => { setOpen(false); setName(''); setError('') }}
-          className="rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-300 px-4 py-2.5 text-sm transition-colors"
+          className="rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-600 px-4 py-2.5 text-sm transition-colors"
         >
           Cancel
         </button>
