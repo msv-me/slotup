@@ -39,7 +39,7 @@ export default function ClaimForm({ gameId, label, note, org, teamSlug }: Props)
         </div>
         <button
           onClick={() => setOpen(true)}
-          className="shrink-0 rounded-lg bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-medium py-2 px-4 text-sm transition-colors"
+          className="shrink-0 rounded-lg bg-brand-600 hover:bg-brand-500 active:bg-brand-700 text-white font-medium py-2 px-4 text-sm transition-colors"
         >
           Claim this slot
         </button>
@@ -66,14 +66,14 @@ export default function ClaimForm({ gameId, label, note, org, teamSlug }: Props)
           value={name}
           onChange={(e) => { setName(e.target.value); setError('') }}
           onKeyDown={(e) => e.key === 'Enter' && submit()}
-          className="w-full rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
         />
         {error && <p className="text-red-500 text-xs">{error}</p>}
         <div className="flex gap-2">
           <button
             onClick={submit}
             disabled={pending || !name.trim()}
-            className="flex-1 sm:flex-none sm:min-w-32 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-medium py-2.5 px-5 text-sm transition-colors"
+            className="flex-1 sm:flex-none sm:min-w-32 rounded-lg bg-brand-600 hover:bg-brand-500 disabled:opacity-40 text-white font-medium py-2.5 px-5 text-sm transition-colors"
           >
             {pending ? 'Claiming…' : 'Confirm'}
           </button>

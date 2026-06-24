@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-2xl mx-auto px-4 py-16 sm:py-20">
-          <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-4">
+          <p className="text-xs font-semibold tracking-widest text-brand-700 uppercase mb-4">
             Youth sports · Free · No account needed
           </p>
           <h1 className="font-display text-5xl sm:text-6xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-5">
@@ -19,7 +19,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:hello@slotup.xyz"
-            className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-600 text-white font-semibold rounded-xl px-6 py-3 text-sm transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-600 text-white font-semibold rounded-xl px-6 py-3 text-sm transition-colors shadow-sm"
           >
             Set up your team →
           </a>
@@ -30,15 +30,15 @@ export default function Home() {
       <div className="border-b border-gray-100 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 py-6 grid grid-cols-3 gap-4">
           <div>
-            <p className="text-2xl font-bold text-blue-700 font-display">0</p>
+            <p className="text-2xl font-bold text-brand-700 font-display">0</p>
             <p className="text-xs text-gray-400 mt-0.5">apps to download</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-blue-700 font-display">0</p>
+            <p className="text-2xl font-bold text-brand-700 font-display">0</p>
             <p className="text-xs text-gray-400 mt-0.5">accounts required</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-blue-700 font-display">0</p>
+            <p className="text-2xl font-bold text-brand-700 font-display">0</p>
             <p className="text-xs text-gray-400 mt-0.5">ads, ever</p>
           </div>
         </div>
@@ -46,25 +46,25 @@ export default function Home() {
 
       {/* How it works */}
       <div className="max-w-2xl mx-auto px-4 py-12">
-        <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-6">How it works</p>
+        <p className="text-xs font-semibold tracking-widest text-brand-700 uppercase mb-6">How it works</p>
 
         <div className="flex flex-col gap-px border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
           <div className="bg-white px-5 py-5 flex items-start gap-4">
-            <span className="shrink-0 w-7 h-7 rounded-full bg-blue-50 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+            <span className="shrink-0 w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-xs font-bold flex items-center justify-center mt-0.5">1</span>
             <div>
               <p className="font-semibold text-gray-900">Coach adds games as they're scheduled</p>
               <p className="text-gray-400 text-sm mt-0.5">New games appear on the sign-up page instantly — no code changes, no redeploys</p>
             </div>
           </div>
           <div className="bg-gray-50 px-5 py-5 flex items-start gap-4">
-            <span className="shrink-0 w-7 h-7 rounded-full bg-blue-50 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+            <span className="shrink-0 w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-xs font-bold flex items-center justify-center mt-0.5">2</span>
             <div>
               <p className="font-semibold text-gray-900">Share one link in your group chat</p>
               <p className="text-gray-400 text-sm mt-0.5">Works in iMessage, WhatsApp, email, LeagueApps — anywhere</p>
             </div>
           </div>
           <div className="bg-white px-5 py-5 flex items-start gap-4">
-            <span className="shrink-0 w-7 h-7 rounded-full bg-blue-50 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+            <span className="shrink-0 w-7 h-7 rounded-full bg-brand-50 text-brand-700 text-xs font-bold flex items-center justify-center mt-0.5">3</span>
             <div>
               <p className="font-semibold text-gray-900">Parents tap a game and enter their name</p>
               <p className="text-gray-400 text-sm mt-0.5">Slot locks instantly — no double-claims, no confusion</p>
@@ -75,7 +75,7 @@ export default function Home() {
 
       {/* Feature cards */}
       <div className="max-w-2xl mx-auto px-4 pb-12">
-        <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-6">Why coaches love it</p>
+        <p className="text-xs font-semibold tracking-widest text-brand-700 uppercase mb-6">Why coaches love it</p>
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-white border border-gray-200 rounded-2xl px-5 py-5 shadow-sm">
             <p className="text-2xl mb-3">🍎</p>
@@ -102,12 +102,12 @@ export default function Home() {
 
       {/* CTA */}
       <div className="max-w-2xl mx-auto px-4 pb-16">
-        <div className="bg-blue-700 rounded-2xl px-6 py-7 text-white">
+        <div className="bg-brand-700 rounded-2xl px-6 py-7 text-white">
           <p className="font-display font-bold text-xl mb-1">Ready to set up your team?</p>
-          <p className="text-blue-200 text-sm mb-5">Takes about 5 minutes. Free for coaches.</p>
+          <p className="text-brand-200 text-sm mb-5">Takes about 5 minutes. Free for coaches.</p>
           <a
             href="mailto:hello@slotup.xyz"
-            className="inline-flex items-center gap-2 bg-white text-blue-700 font-semibold text-sm rounded-xl px-5 py-2.5 hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold text-sm rounded-xl px-5 py-2.5 hover:bg-brand-50 transition-colors"
           >
             Get in touch →
           </a>

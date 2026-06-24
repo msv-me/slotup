@@ -36,7 +36,7 @@ export default async function TeamPage({
           )}
 
           <div className="mb-6">
-            <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-1">
+            <p className="text-xs font-semibold tracking-widest text-brand-700 uppercase mb-1">
               Snack Sign-Up
             </p>
             <h1 className="font-display text-3xl font-bold text-gray-900 leading-tight">
@@ -49,7 +49,7 @@ export default async function TeamPage({
 
           <div className="grid grid-cols-3 gap-3 mb-6">
             <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-              <p className="text-2xl font-bold text-blue-700">{games.length}</p>
+              <p className="text-2xl font-bold text-brand-700">{games.length}</p>
               <p className="text-xs text-gray-400 mt-0.5">games total</p>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
@@ -128,7 +128,7 @@ export default async function TeamPage({
         </Link>
 
         <div className="mb-6">
-          <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-1">Snack Sign-Ups</p>
+          <p className="text-xs font-semibold tracking-widest text-brand-700 uppercase mb-1">Snack Sign-Ups</p>
           <h1 className="font-display text-3xl font-bold text-gray-900">Pick your group</h1>
           <p className="text-gray-500 text-sm mt-1">Select your team's sign-up sheet below.</p>
         </div>
@@ -144,7 +144,7 @@ export default async function TeamPage({
                 <div className="min-w-0">
                   <p className="font-semibold text-gray-900">{g.display_name}</p>
                   {g.description && <p className="text-gray-400 text-sm mt-0.5">{g.description}</p>}
-                  <p className="text-xs text-blue-600 mt-1.5">
+                  <p className="text-xs text-brand-600 mt-1.5">
                     {g.open} slot{g.open !== 1 ? 's' : ''} open
                   </p>
                 </div>

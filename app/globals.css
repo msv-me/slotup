@@ -3,4 +3,11 @@
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #eef1f8;
+  --color-brand-200: #b3c3e6;
+  --color-brand-500: #1a52c4;
+  --color-brand-600: #0039b8;
+  --color-brand-700: #0032a0;
+  --color-brand-800: #002880;
+  --color-brand-900: #001f60;
 }
