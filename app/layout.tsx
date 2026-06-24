@@ -8,6 +8,9 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakart
 export const metadata: Metadata = {
   title: 'Slotup',
   description: 'Simple snack & volunteer sign-ups for youth sports',
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
