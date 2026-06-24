@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import { getSheet } from '@/lib/sheets'
 import { supabase } from '@/lib/supabase'
 import ClaimForm from './ClaimForm'
+import Nav from '@/app/components/Nav'
 
 export const revalidate = 0
 
@@ -26,34 +26,38 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
   const totalSlots = sheet.slots.length
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="max-w-md mx-auto px-4 py-10">
+    <div className="min-h-screen bg-gray-50">
+      <Nav />
 
-        {/* Back */}
-        <a href="/" className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-gray-600 mb-6 transition-colors">
+      <div className="max-w-2xl mx-auto px-4 py-6">
+
+        {/* Breadcrumb */}
+        <a href="/" className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-gray-600 mb-5 transition-colors">
           ← All sign-ups
         </a>
 
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-3">
-            <Image src="/sparta-logo.webp" alt="Sparta United" width={40} height={40} />
-            <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase">
-              Snack Sign-Up
-            </p>
-          </div>
-          <h1 className="text-2xl font-bold text-gray-900">{sheet.title}</h1>
+        {/* Page heading */}
+        <div className="mb-6">
+          <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-1">
+            {sheet.team} Team · UCC Jamboree
+          </p>
+          <h1 className="text-3xl font-bold text-gray-900 leading-tight">Snack Sign-Up</h1>
           <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">{sheet.description}</p>
-          <div className="mt-4 flex items-center gap-2">
-            <div className="h-1.5 flex-1 rounded-full bg-gray-200 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-blue-600 transition-all"
-                style={{ width: `${(claimedCount / totalSlots) * 100}%` }}
-              />
-            </div>
-            <p className="text-xs text-gray-400 shrink-0">
-              {claimedCount} of {totalSlots} claimed
-            </p>
+        </div>
+
+        {/* Stats bar */}
+        <div className="grid grid-cols-3 gap-3 mb-6">
+          <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
+            <p className="text-2xl font-bold text-blue-700">{totalSlots}</p>
+            <p className="text-xs text-gray-400 mt-0.5">games total</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
+            <p className="text-2xl font-bold text-green-600">{claimedCount}</p>
+            <p className="text-xs text-gray-400 mt-0.5">slots claimed</p>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
+            <p className="text-2xl font-bold text-gray-700">{totalSlots - claimedCount}</p>
+            <p className="text-xs text-gray-400 mt-0.5">still open</p>
           </div>
         </div>
 
@@ -65,7 +69,7 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
               <div
                 key={slot.id}
                 className={`bg-white rounded-xl border px-5 py-4 shadow-sm transition-all ${
-                  claimer ? 'border-gray-100 opacity-80' : 'border-gray-200'
+                  claimer ? 'border-gray-100 opacity-75' : 'border-gray-200'
                 }`}
               >
                 <div className="flex items-start justify-between gap-2">
@@ -101,6 +105,6 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
           Slotup · No ads, ever.
         </p>
       </div>
-    </main>
+    </div>
   )
 }
