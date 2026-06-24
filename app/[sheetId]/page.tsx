@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import { getSheet } from '@/lib/sheets'
 import { supabase } from '@/lib/supabase'
 import ClaimForm from './ClaimForm'
@@ -30,15 +31,18 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
 
         {/* Header */}
         <div className="mb-8">
-          <p className="text-xs font-semibold tracking-widest text-indigo-600 uppercase mb-2">
-            Snack Sign-Up
-          </p>
+          <div className="flex items-center gap-3 mb-3">
+            <Image src="/sparta-logo.webp" alt="Sparta United" width={40} height={40} />
+            <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase">
+              Snack Sign-Up
+            </p>
+          </div>
           <h1 className="text-2xl font-bold text-gray-900">{sheet.title}</h1>
           <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">{sheet.description}</p>
           <div className="mt-4 flex items-center gap-2">
             <div className="h-1.5 flex-1 rounded-full bg-gray-200 overflow-hidden">
               <div
-                className="h-full rounded-full bg-indigo-500 transition-all"
+                className="h-full rounded-full bg-blue-600 transition-all"
                 style={{ width: `${(claimedCount / totalSlots) * 100}%` }}
               />
             </div>

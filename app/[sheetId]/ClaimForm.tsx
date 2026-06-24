@@ -26,7 +26,7 @@ export default function ClaimForm({ sheetId, slotId }: { sheetId: string; slotId
     return (
       <button
         onClick={() => setOpen(true)}
-        className="mt-3 w-full rounded-lg bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-medium py-2.5 text-sm transition-colors"
+        className="mt-3 w-full rounded-lg bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-medium py-2.5 text-sm transition-colors"
       >
         Claim this slot
       </button>
@@ -42,14 +42,14 @@ export default function ClaimForm({ sheetId, slotId }: { sheetId: string; slotId
         value={name}
         onChange={(e) => { setName(e.target.value); setError('') }}
         onKeyDown={(e) => e.key === 'Enter' && submit()}
-        className="w-full rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+        className="w-full rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
       />
       {error && <p className="text-red-500 text-xs">{error}</p>}
       <div className="flex gap-2">
         <button
           onClick={submit}
           disabled={pending || !name.trim()}
-          className="flex-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white font-medium py-2.5 text-sm transition-colors"
+          className="flex-1 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-medium py-2.5 text-sm transition-colors"
         >
           {pending ? 'Claiming…' : 'Confirm'}
         </button>
