@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   title: 'Slotup',
   description: 'Simple snack & volunteer sign-ups for youth sports',
   icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    icon: [{ url: '/slotup-icon.svg', type: 'image/svg+xml' }],
+    apple: '/slotup-icon.png',
   },
 }
 
