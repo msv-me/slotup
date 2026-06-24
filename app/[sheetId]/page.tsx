@@ -29,6 +29,11 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
     <main className="min-h-screen bg-gray-50">
       <div className="max-w-md mx-auto px-4 py-10">
 
+        {/* Back */}
+        <a href="/" className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-gray-600 mb-6 transition-colors">
+          ← All sign-ups
+        </a>
+
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">
