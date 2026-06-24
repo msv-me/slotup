@@ -123,10 +123,6 @@ export default async function TeamPage({
       <Nav />
       <div className="max-w-2xl mx-auto px-4 py-6">
 
-        <Link href="/" className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-gray-600 mb-5 transition-colors">
-          ← Home
-        </Link>
-
         <div className="mb-6">
           <p className="text-xs font-semibold tracking-widest text-brand-700 uppercase mb-1">Snack Sign-Ups</p>
           <h1 className="font-display text-3xl font-bold text-gray-900">Pick your group</h1>
