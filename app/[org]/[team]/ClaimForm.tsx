@@ -4,13 +4,14 @@ import { useState, useTransition } from 'react'
 import { claimSlot } from '@/app/actions'
 
 interface Props {
-  sheetId: string
-  slotId: string
+  gameId: string
   label: string
   note?: string
+  org: string
+  teamSlug: string
 }
 
-export default function ClaimForm({ sheetId, slotId, label, note }: Props) {
+export default function ClaimForm({ gameId, label, note, org, teamSlug }: Props) {
   const [open, setOpen] = useState(false)
   const [name, setName] = useState('')
   const [error, setError] = useState('')
@@ -18,7 +19,7 @@ export default function ClaimForm({ sheetId, slotId, label, note }: Props) {
 
   function submit() {
     startTransition(async () => {
-      const result = await claimSlot(sheetId, slotId, name)
+      const result = await claimSlot(gameId, name, org, teamSlug)
       if (result.error) {
         setError(result.error)
       } else {

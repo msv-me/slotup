@@ -3,13 +3,12 @@
 import { revalidatePath } from 'next/cache'
 import { supabase } from '@/lib/supabase'
 
-export async function claimSlot(sheetId: string, slotId: string, name: string) {
+export async function claimSlot(gameId: string, name: string, org: string, teamSlug: string) {
   const trimmed = name.trim()
   if (!trimmed) return { error: 'Please enter your name.' }
 
   const { error } = await supabase.from('signups').insert({
-    sheet_id: sheetId,
-    slot_id: slotId,
+    game_id: gameId,
     claimer_name: trimmed,
   })
 
@@ -18,6 +17,6 @@ export async function claimSlot(sheetId: string, slotId: string, name: string) {
     return { error: 'Something went wrong. Try again.' }
   }
 
-  revalidatePath(`/${sheetId}`)
+  revalidatePath(`/${org}/${teamSlug}`)
   return { success: true }
 }
