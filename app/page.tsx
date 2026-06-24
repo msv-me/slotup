@@ -9,7 +9,7 @@ export default function Home() {
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="mb-6">
           <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-1">Sign-Ups</p>
-          <h1 className="text-3xl font-bold text-gray-900">Pick your team</h1>
+          <h1 className="font-display text-3xl font-bold text-gray-900">Pick your team</h1>
           <p className="text-gray-500 text-sm mt-1">Select a sign-up sheet below to claim a snack slot.</p>
         </div>
         <div className="flex flex-col gap-3">

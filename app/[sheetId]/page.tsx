@@ -41,7 +41,7 @@ export default async function SheetPage({ params }: { params: Promise<{ sheetId:
           <p className="text-xs font-semibold tracking-widest text-blue-700 uppercase mb-1">
             {sheet.team} Team · UCC Jamboree
           </p>
-          <h1 className="text-3xl font-bold text-gray-900 leading-tight">Snack Sign-Up</h1>
+          <h1 className="font-display text-3xl font-bold text-gray-900 leading-tight">Snack Sign-Up</h1>
           <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">{sheet.description}</p>
         </div>
 
